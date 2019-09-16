@@ -1,0 +1,208 @@
+
+
+//---- notice ----//
+.notice {
+  width: 100%;
+  &__text {
+    background: #38AEF0;
+    font-size: 16px;
+    text-align: center;
+    color: #FFF;
+  }
+}
+
+//----------- header left -------------//
+.top {
+  width: 100%;
+  height: 100px;
+  border: black;
+  &__head--left {
+    background-color: #253141;
+    height: 100px;
+    width: 300px;
+    float: left;
+    padding: 0 20px;
+    box-sizing: border-box;
+    &-name{
+      float: left;
+      color: #ffffff;
+      font-weight: bold;
+      line-height: 100px;
+    }
+    &-icon {
+      float: right;
+      &-btn{
+        display: inline-block;
+        font-weight: bold;
+        line-height: 100px;
+        &-new{
+          color: #ffffff;
+        }
+      }
+    } 
+  }
+} 
+
+//----------- header right -------------//
+
+.top__head--right {
+  background-color: #fff;
+  height: 100px;
+  width: calc(100% - 300px);
+  border-bottom: solid thin #eeeeee;
+  display: inline-block;
+  padding: 0 40px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: scroll;
+  &-group {
+    margin-top: 35px;
+    &-name {
+      font-size: 20px;
+    }
+    &-name h2 {
+      margin-bottom: 15px;
+      color: #333333;
+    }
+    &-member {
+      padding-top: 10px;
+      &-name {
+        color: #999999;
+        font-weight: normal;
+        display: inline;
+        font-size: 12px;
+      }
+    }
+    &-edit {
+      line-height: 100px;
+      &-btn {
+        border: solid 1px #38aef0;
+        height: 40px;
+        margin-top: 30px;
+        padding: 0 20px;
+        line-height: 40px;
+        font-size: 16px;
+        color: #38aef0;
+        position: absolute;
+        top: 0;
+        right: 40px;
+        box-sizing: border-box;
+      }
+    }
+  }
+}
+
+//----------- contents left -----------//
+
+.feature {
+  background-color: #fafafa;
+  width: 100%;
+  height: calc(100vh - 106px);
+  &__body--left {
+    background-color: #2f3e51;
+    height: 100%;
+    width: 300px;
+    float: left;
+    padding: 20px 20px 0 20px;
+    box-sizing: border-box;
+    overflow: scroll;
+    &-group {
+      color: #ffffff;
+      margin-bottom: 40px;
+      &-name {
+        font-size: 15px;
+        margin-bottom: 5px;
+      }
+      &-text {
+        font-size: 11px;
+      }      
+    }
+  }
+}
+
+//------------ contents right ------------//
+
+.feature__body--right {
+  width: calc(100% - 300px);
+  height: 100%;
+  float: right;
+  position: relative;
+  &-center {
+    height: calc(100vh - 190px);
+    background-color: #fafafa;
+    overflow: scroll;
+    padding: 46px 40px;
+    box-sizing: border-box;
+    &-comment {
+      margin-bottom: 10px;
+      &-box{
+        &-member {
+          display: inline-block;
+          font-size: 16px;
+          font-weight: bold;
+          color: #434a54;
+        }
+        &-date {
+          display: inline-block;
+          font-size: 12px;
+          color: #999999;
+          font-size: 12px;
+        }
+        &-text {
+          font-size: 14px;
+          color: #434a54;
+          margin-bottom: 40px;
+        }
+      }
+    }
+  }
+}
+
+//--------------- contents bottom ----------------//
+
+.feature__body--right-bottom {
+  background-color: #dddddd;
+  height: 90px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding: 20px 40px;
+  box-sizing: border-box;
+  &-box {
+    height: 50px;
+    display: flex;
+    &-text {
+      width: 100%;
+      position: relative;
+      &-detail {
+        height: 50px;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 10px;
+        margin-right: 15px;
+        border-style: none;
+      }
+      &-btn {
+        position: absolute;
+        top: 10px;
+        right:10px;
+        font-size: 1.3rem;
+        &-new{
+          color: #000000;
+        }
+        &-none {
+          display: none;
+        }
+      }
+    }
+    &-text-send {
+      height: 50px;
+      width: 100px;
+      box-sizing: border-box;
+      border-style: none;
+      background-color: #38aef0;
+      margin-left: 15px;
+      color: #ffffff;
+    }    
+  }
+}

@@ -1,0 +1,56 @@
+.notice
+  .notice__text
+    グループを作成しました
+
+.top
+
+  .top__head--left
+    %p.top__head--left-name テスト
+    %ul.top__head--left-icon
+      %li.top__head--left-icon-btn
+        =link_to "", class: "top__head--left-icon-btn-new" do
+          = fa_icon 'edit'
+      %li.top__head--left-icon-btn
+        =link_to "", class: "top__head--left-icon-btn-new" do
+          = fa_icon 'cog'
+
+  .top__head--right
+    .top__head--right-group
+      %h2.top__head--right-group-name テスト
+      .top__head--right-group-member
+        %p.top__head--right-group-member-name Member :
+        %p.top__head--right-group-member-name おか
+        %p.top__head--right-group-member-name kouhei
+
+      %a(href="" class="top__head--right-group-edit")
+        .top__head--right-group-edit-btn Edit
+
+.feature
+
+  .feature__body--left
+    .feature__body--left-group
+      .p.feature__body--left-group-name test
+      .p.feature__body--left-group-text test
+    .feature__body--left-group
+      %p.feature__body--left-group-name test
+      %p.feature__body--left-group-text test
+
+  .feature__body--right
+
+    .feature__body--right-center
+
+      .feature__body--right-center-comment
+        .feature__body--right-center-comment-box
+          %p.feature__body--right-center-comment-box-member member name
+          %p.feature__body--right-center-comment-box-date date
+        %p.feature__body--right-center-comment-text comment
+
+    .feature__body--right-bottom
+      .feature__body--right-bottom-box
+        .feature__body--right-bottom-box-text
+          %input(type="text" placeholder="type a message" class="feature__body--right-bottom-box-text-detail")
+          %label.feature__body--right-bottom-box-text-btn
+            =link_to "", class:"feature__body--right-bottom-box-text-btn-new" do
+              = fa_icon 'image'
+            %input(type="file" class="feature__body--right-bottom-box-text-btn-none")
+        %input(type="button" value="Send" class="feature__body--right-bottom-box-text-send")
