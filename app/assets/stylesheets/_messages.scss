@@ -97,7 +97,7 @@
 .feature {
   background-color: #fafafa;
   width: 100%;
-  height: calc(100vh - 106px);
+  height: calc(100vh - 99px);
   &__body--left {
     background-color: #2f3e51;
     height: 100%;
@@ -107,15 +107,19 @@
     box-sizing: border-box;
     overflow: scroll;
     &-group {
-      color: #ffffff;
-      margin-bottom: 40px;
-      &-name {
-        font-size: 15px;
-        margin-bottom: 5px;
+      &-set {
+        text-decoration: none;
+        &-name {
+          font-size: 15px;
+          margin-bottom: 5px;
+          color: #ffffff;
+        }
+        &-text {
+          font-size: 11px;
+          color: #ffffff;
+          margin-bottom: 40px;
+        }   
       }
-      &-text {
-        font-size: 11px;
-      }      
     }
   }
 }

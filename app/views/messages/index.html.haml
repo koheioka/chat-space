@@ -1,16 +1,8 @@
 
 .top
 
-  .top__head--left
-    %p.top__head--left-name テスト
-    %ul.top__head--left-icon
-      %li.top__head--left-icon-btn
-        =link_to "", class: "top__head--left-icon-btn-new" do
-          = fa_icon 'edit'
-      %li.top__head--left-icon-btn
-        =link_to edit_user_path(current_user), class: "top__head--left-icon-btn-new" do
-          = fa_icon 'cog'
-
+  = render "shared/side_bar_top"
+          
   .top__head--right
     .top__head--right-group
       %h2.top__head--right-group-name テスト
@@ -24,13 +16,7 @@
 
 .feature
 
-  .feature__body--left
-    .feature__body--left-group
-      .p.feature__body--left-group-name test
-      .p.feature__body--left-group-text test
-    .feature__body--left-group
-      %p.feature__body--left-group-name test
-      %p.feature__body--left-group-text test
+  = render "shared/side_bar_bottom"
 
   .feature__body--right
 
