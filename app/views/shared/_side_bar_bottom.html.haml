@@ -1,0 +1,8 @@
+.feature__body--left
+  - current_user.groups.each do |group|
+    .feature__body--left-group
+      = link_to groups_path(group), class:"feature__body--left-group-set" do
+        .feature__body--left-group-set-name
+          = group.name
+        .feature__body--left-group-set-text
+          メッセージはまだありません。

@@ -1,0 +1,10 @@
+.top__head--left
+  %p.top__head--left-name 
+    = current_user.name
+  %ul.top__head--left-icon
+    %li.top__head--left-icon-btn
+      = link_to new_group_path, class: "top__head--left-icon-btn-new" do
+        = fa_icon 'pencil-square-o'
+    %li.top__head--left-icon-btn
+      = link_to edit_user_path(current_user), class: "top__head--left-icon-btn-new" do
+        = fa_icon 'cog'
