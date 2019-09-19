@@ -59,13 +59,14 @@
     margin-top: 35px;
     &-name {
       font-size: 20px;
-    }
-    &-name h2 {
-      margin-bottom: 15px;
-      color: #333333;
+      .member {
+        display: flex;
+        padding-top:15px;
+      }
     }
     &-member {
-      padding-top: 10px;
+      font-size: 12px;
+      color: #999999;
       &-name {
         color: #999999;
         font-weight: normal;
@@ -139,6 +140,7 @@
     box-sizing: border-box;
     &-comment {
       margin-bottom: 10px;
+      padding-bottom: 40px;
       &-box{
         &-member {
           display: inline-block;
@@ -152,7 +154,7 @@
           color: #999999;
           font-size: 12px;
         }
-        &-text {
+        &-message-text {
           font-size: 14px;
           color: #434a54;
           margin-bottom: 40px;
@@ -168,19 +170,18 @@
   background-color: #dddddd;
   height: 90px;
   width: 100%;
-  position: absolute;
-  bottom: 0;
   padding: 20px 40px;
   box-sizing: border-box;
   &-box {
     height: 50px;
     display: flex;
+    width: 100%;
+    position: relative;
     &-text {
       width: 100%;
-      position: relative;
       &-detail {
         height: 50px;
-        width: 100%;
+        width: 99%;
         box-sizing: border-box;
         padding: 0 10px;
         margin-right: 15px;
@@ -189,11 +190,8 @@
       &-btn {
         position: absolute;
         top: 10px;
-        right:10px;
+        right:127px;
         font-size: 1.3rem;
-        &-new{
-          color: #000000;
-        }
         &-none {
           display: none;
         }
@@ -201,12 +199,19 @@
     }
     &-text-send {
       height: 50px;
-      width: 100px;
+      width: 112px;
       box-sizing: border-box;
       border-style: none;
       background-color: #38aef0;
-      margin-left: 15px;
       color: #ffffff;
     }    
   }
+  .new_message {
+    display: flex;
+    width: 100%;
+  }
+  .form__mask {
+    width: 100%;
+  }
 }
+
