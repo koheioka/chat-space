@@ -1,0 +1,15 @@
+.feature__body--right-center-comment
+  .feature__body--right-center-comment-box
+    .feature__body--right-center-comment-box-member
+      = message.user.name
+    .feature__body--right-center-comment-box-date
+      = message.created_at.strftime("%Y/%m/%d %H:%M")
+  .feature__body--right-center-comment-message
+    - if message.content.present?
+      %p.feature__body--right-center-comment-message-text
+        = message.content
+    = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
+
+
+
+    

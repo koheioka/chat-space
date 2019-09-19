@@ -5,13 +5,16 @@
           
   .top__head--right
     .top__head--right-group
-      %h2.top__head--right-group-name テスト
-      .top__head--right-group-member
-        %p.top__head--right-group-member-name Member :
-        %p.top__head--right-group-member-name おか
-        %p.top__head--right-group-member-name kouhei
+      %h7.top__head--right-group-name 
+        =@group.name
+        .member
+          %p.top__head--right-group-member 
+            Menber :
+          - @group.users.each do |user|
+            %p.top__head--right-group-member-name
+              = user.name
 
-      %a(href="" class="top__head--right-group-edit")
+      = link_to edit_group_path(current_user), class: "top__head--right-group-edit" do 
         .top__head--right-group-edit-btn Edit
 
 .feature
@@ -21,19 +24,15 @@
   .feature__body--right
 
     .feature__body--right-center
-
-      .feature__body--right-center-comment
-        .feature__body--right-center-comment-box
-          %p.feature__body--right-center-comment-box-member member name
-          %p.feature__body--right-center-comment-box-date date
-        %p.feature__body--right-center-comment-text comment
+      = render @messages
 
     .feature__body--right-bottom
       .feature__body--right-bottom-box
         .feature__body--right-bottom-box-text
-          %input(type="text" placeholder="type a message" class="feature__body--right-bottom-box-text-detail")
-          %label.feature__body--right-bottom-box-text-btn
-            =link_to "", class:"feature__body--right-bottom-box-text-btn-new" do
-              = fa_icon 'image'
-            %input(type="file" class="feature__body--right-bottom-box-text-btn-none")
-        %input(type="button" value="Send" class="feature__body--right-bottom-box-text-send")
+          = form_for [@group, @message] do |f|
+            .form__mask
+              = f.text_field :content, class: 'feature__body--right-bottom-box-text-detail', placeholder: 'type a message'
+              = f.label :image, class: 'feature__body--right-bottom-box-text-btn' do
+                = fa_icon 'picture-o', class: 'icon'
+                = f.file_field :image, class: 'feature__body--right-bottom-box-text-btn-none'
+            = f.submit 'Send', class: 'feature__body--right-bottom-box-text-send'
