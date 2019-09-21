@@ -14,7 +14,7 @@
             %p.top__head--right-group-member-name
               = user.name
 
-      = link_to edit_group_path(current_user), class: "top__head--right-group-edit" do 
+      = link_to edit_group_path(@group.id), class: "top__head--right-group-edit" do 
         .top__head--right-group-edit-btn Edit
 
 .feature
