@@ -37,7 +37,7 @@ $(function(){
     .done(function(data){
       var html = buildHTML(data);
       $('.feature__body--right-center').append(html)
-      $('#message_content').val('');
+      $("#new_message")[0].reset();
       $('.feature__body--right-center').animate({ scrollTop: $('.feature__body--right-center')[0].scrollHeight});
       return false
     })
