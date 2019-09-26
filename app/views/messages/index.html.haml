@@ -5,7 +5,7 @@
           
   .top__head--right
     .top__head--right-group
-      %h7.top__head--right-group-name 
+      %h7.top__head--right-group-name{"data-group-id": "#{@group.id}"}
         =@group.name
         .member
           %p.top__head--right-group-member 
