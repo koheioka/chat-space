@@ -3,7 +3,7 @@
     .feature__body--right-center-comment-box-member
       = message.user.name
     .feature__body--right-center-comment-box-date
-      = message.created_at.strftime("%Y/%m/%d %H:%M")
+      = message.created_at.to_s
   .feature__body--right-center-comment-message
     - if message.content.present?
       %p.feature__body--right-center-comment-message-text
