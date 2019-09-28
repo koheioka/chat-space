@@ -1,4 +1,4 @@
-$(function(){
+$(document).on('turbolinks:load', function(){
   function buildHTML(message){
     var content = message.content ? `${ message.content }` : "";
     var image = message.image ? `<img class="lower-info__image" src="${ message.image }">` : "";
@@ -52,7 +52,6 @@ $(function(){
     if (window.location.href.match(/\/groups\/\d+\/messages/)){
       var group_id = $('.top__head--right-group-name').data('group-id');
       var last_message_id = $('.feature__body--right-center-comment:last').data('message-id'); 
-      console.log(last_message_id)
       $.ajax({ 
         url: `/groups/${group_id}/api/messages`, 
         type: 'get', 
